@@ -1,0 +1,25 @@
+{
+  "name": "game-of-life-3d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@domgell/game-input": "*",
+    "@domgell/game-util": "*",
+    "@domgell/webgpu-builder": "*",
+    "@domgell/webgpu-samples": "*",
+    "@domgell/webgpu-util": "*",
+    "@mori2003/jsimgui": "^0.13.0",
+    "dom-game-math": "*"
+  },
+  "devDependencies": {
+    "@webgpu/types": "^0.1.48",
+    "vite": "*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
