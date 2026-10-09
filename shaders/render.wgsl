@@ -42,7 +42,7 @@ fn frag(
     @location(1) normal: vec3f,
     @location(2) localPosition: vec3f,
 ) -> @location(0) vec4f {
-    let nDotL = max(dot(normalize(normal), normalize(vec3f(1, 1, 1))), 0.75);
+    let nDotL = max(dot(normalize(normal), normalize(vec3f(1, 2, 3))), 0.75);
 
     let maxSize = f32(tileSideCount) * tileSize;
     let color = max(worldPosition / maxSize, vec3f(0.5)) + abs(localPosition) * 0.25;

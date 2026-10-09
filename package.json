@@ -7,13 +7,13 @@
     "dev": "vite"
   },
   "dependencies": {
-    "@domgell/game-input": "*",
-    "@domgell/game-util": "*",
-    "@domgell/webgpu-builder": "*",
-    "@domgell/webgpu-samples": "*",
-    "@domgell/webgpu-util": "*",
+    "@domgell/game-input": "1.0.2",
+    "@domgell/game-util": "1.0.5",
+    "@domgell/webgpu-builder": "1.0.6",
+    "@domgell/webgpu-samples": "1.0.1",
+    "@domgell/webgpu-util": "1.0.10",
     "@mori2003/jsimgui": "^0.13.0",
-    "dom-game-math": "*"
+    "dom-game-math": "1.0.13"
   },
   "devDependencies": {
     "@webgpu/types": "^0.1.48",

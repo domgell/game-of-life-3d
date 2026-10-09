@@ -31,17 +31,11 @@ fn getTileIndex(coord: vec3u) -> u32 {
     return coord.z * tileSideCount * tileSideCount + coord.y * tileSideCount + coord.x;
 }
 
-fn getTileMask(index: u32) {
-    
-}
-
 fn getTile(index: u32) -> bool {
     let wordIndex = index / 32u;
     let mask = 1u << (index % 32u);
 
     return bool(prevTiles[wordIndex] & mask);
-
-    //return bool(prevTiles[index]);
 }
 
 fn setTile(index: u32, alive: bool) {
@@ -53,8 +47,6 @@ fn setTile(index: u32, alive: bool) {
     } else {
         atomicAnd(&nextTiles[wordIndex], ~mask);
     }
-
-    //nextTiles[index] = u32(alive);
 }
 
 @compute @workgroup_size(workgroupSize, workgroupSize, workgroupSize)
