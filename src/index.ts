@@ -26,7 +26,7 @@ const {cameraBuffer} = GPU.createCameraState(device);
 const colorState = GPU.defaultColorTargetState({format});
 const depthState = GPU.defaultDepthTargetState();
 
-const depthTexture = GPU.createDepthTexture(device, canvas);
+let depthTexture = GPU.createDepthTexture(device, canvas);
 
 const tileSideCount = 128;
 const tileSize = 0.1;
@@ -58,6 +58,18 @@ let cameraYaw = 0;
 let cameraPitch = 0;
 
 Game.runUpdate((dt, t) => {
+
+    /* --------------------------------- Resize --------------------------------- */
+
+    canvas.width = window.innerWidth - 20;
+    canvas.height = window.innerHeight - 20;
+
+    if (canvas.width !== depthTexture.width || canvas.height !== depthTexture.height) {
+        context.configure(context.getConfiguration()!);
+
+        depthTexture.destroy();
+        depthTexture = GPU.createDepthTexture(device, canvas);
+    }
 
     /* --------------------------------- Camera --------------------------------- */
 
