@@ -6,7 +6,7 @@
 Implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in 3D using WebGPU and compute shaders. 
 
 # Usage
-**A web based version is hosted at: [domgell.github.io](https://domgell.github.io/game-of-life-3d/demo/)**
+**A web based version is hosted at: [domgell.github.io](https://domgell.github.io/game-of-life-3d/)**
 
 Note, this requires your device supports WebGPU and a relatively modern dedicated GPU for optimal performance. 
 Check [Implementation-Status](https://github.com/gpuweb/gpuweb/wiki/Implementation-Status) for more information on WebGPU support.
